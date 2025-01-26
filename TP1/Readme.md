@@ -15,6 +15,7 @@ Afin de procéder à la création d’une application pouvant répondre à la pr
 • **Identifier le nombre de stationnement gratuits et payants disponibles dans cette zone**;
 
 •	**Intégrer les signalisations de restrictions de stationnements pendant le déneigement**.
+
 Toutes ces opérations se feront à l’aide de l’outil FME Workbench 2024.2.2. Les fonctionnalités reader, attribute keeper, attribute filter, pointonareaoverlayer et attributecreator seront éventuellement utilisées pour l’intégration et le traitement des données.
 
 # 3. **Visualisation**
