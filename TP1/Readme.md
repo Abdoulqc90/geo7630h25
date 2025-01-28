@@ -14,9 +14,9 @@ Afin de procéder à la création d’une application pouvant répondre à la pr
 
 • **Identifier le nombre de stationnement gratuits et payants disponibles dans cette zone**;
 
-•	**Intégrer les signalisations de restrictions de stationnements pendant le déneigement**.
+•**Intégrer les signalisations de restrictions de stationnements pendant le déneigement**.
 
-Toutes ces opérations se feront à l’aide de l’outil FME Workbench 2024.2.2. Les fonctionnalités reader, attribute keeper, attribute filter, pointonareaoverlayer et attributecreator seront éventuellement utilisées pour l’intégration et le traitement des données.
+Toutes ces opérations se feront à l’aide de l’outil FME Workbench 2024.2.2. Les fonctionnalités *reader, attribute keeper, attribute filter, pointonareaoverlayer et attributecreator* seront éventuellement utilisées pour l’intégration et le traitement des données.
 
 # 3. **Visualisation**
 La visualisation des données traitées se fera à l’aide de l’outil QGIS. La carte ainsi obtenue se présentera sous forme d’application web ou mobile telle qu’indiquée ci-dessous:
@@ -27,9 +27,14 @@ _ _ _
 
 ![alt text](<Capture d’écran 2025-01-26 152832.png>)
 
+![alt text](<Capture d’écran 2025-01-27 200552.png>)
 
-# 4. **Sources**
+
+# 4. **Lien vers les jeux de données:**
+
 https://carrefour.vivreenville.org/publication/problematique-du-stationnement
+
+# 5. **Références à la problématique:**
 
 https://www.journaldemontreal.com/2024/01/22/les-defis-du-deneigement-a-montreal
 
