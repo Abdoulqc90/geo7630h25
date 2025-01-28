@@ -22,13 +22,13 @@ Toutes ces opérations se feront à l’aide de l’outil FME Workbench 2024.2.2
 # 3. **Visualisation**
 La visualisation des données traitées se fera à l’aide de l’outil QGIS. La carte ainsi obtenue se présentera sous forme d’application web ou mobile telle qu’indiquée ci-dessous:
 _ _ _ 
-![alt text](<Capture d’écran 2025-01-26 151817-1.png>)
+![alt text](<Capture d’écran 2025-01-27 200552.png>) 
 
-![alt text](<Capture d’écran 2025-01-26 151536.png>)
+![alt text](<Capture d’écran 2025-01-26 151536.png>) 
 
-![alt text](<Capture d’écran 2025-01-26 152832.png>)
+![alt text](<Capture d’écran 2025-01-26 151817.png>) 
 
-![alt text](<Capture d’écran 2025-01-27 200552-1.png>)
+![alt text](<Capture d’écran 2025-01-26 152013.png>)
 
 
 # 4. **Lien vers les jeux de données:**
