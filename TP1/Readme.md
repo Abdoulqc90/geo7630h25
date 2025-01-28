@@ -20,7 +20,7 @@ Afin de procéder à la création d’une application pouvant répondre à la pr
 Toutes ces opérations se feront à l’aide de l’outil FME Workbench 2024.2.2. Les fonctionnalités *reader, attribute keeper, attribute filter, pointonareaoverlayer et attributecreator* seront éventuellement utilisées pour l’intégration et le traitement des données.
 
 # 3. **Visualisation**
-La visualisation des données traitées se fera à l’aide de l’outil QGIS. La carte ainsi obtenue se présentera sous forme d’application web ou mobile telle qu’indiquée ci-dessous:
+La visualisation des données traitées se fera à l’aide de l’outil QGIS. La carte ainsi obtenue se présentera sous forme d’application web ou mobile telles qu’indiquées ci-dessous:
 _ _ _ 
 ![alt text](<Capture d’écran 2025-01-27 200552.png>) 
 
