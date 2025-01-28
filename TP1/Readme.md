@@ -1,10 +1,11 @@
 ## Identification de la problématique:
-# accessibilité des aires de stationnement pendant les périodes de déneigement de la ville de Montréal pour la saison 2024-2025.
+# Accessibilité des aires de stationnement pendant les périodes de déneigement de la ville de Montréal pour la saison 2024-2025.
 
 # 1. **Contexte général**
 Stationner sa voiture à Montréal peut représenter un véritable casse-tête tant pour les usagers de la route que pour les autorités de la ville, encore plus durant la saison de l’hiver. Selon le livre blanc sur le stationnement à Montréal, les aires de stationnement occupent plus de 22,4 km² sur l’île de Montréal, soit un peu plus que l’arrondissement de Côte des Neiges Notre-Dame de Grâce (21,4 km²). Malheureusement la méconnaissance de la répartition spatiale de ces zones pendant l’hiver et des conditions de stationnement entraînent des désagréments chez les usagers. Les autorités municipales quant à elles voient leur programme de déneigement perturbé par le mauvais stationnement.
 Au regard de ce qui précède, il se pose la question de:
-.**Comment garantir l’accessibilité des aires de stationnement à Montréal tout en assurant une gestion efficace du déneigement pendant l’hiver ?
+
+**Comment garantir l’accessibilité des aires de stationnement à Montréal tout en assurant une gestion efficace du déneigement pendant l’hiver ?**
 La réponse à cette question passe nécessairement par le développement d’une application pour une meilleure prise en compte de tous ces éléments.
 
 # 2. **Les données et analyses prévues concernant la problématique des stationnements de Montréal durant les périodes de déneigement.**
@@ -27,22 +28,25 @@ _ _ _
 
 ![alt text](<Capture d’écran 2025-01-26 152832.png>)
 
-![alt text](<Capture d’écran 2025-01-27 200552.png>)
+![alt text](<Capture d’écran 2025-01-27 200552-1.png>)
 
 
 # 4. **Lien vers les jeux de données:**
 
-https://carrefour.vivreenville.org/publication/problematique-du-stationnement
+https://donnees.montreal.ca/dataset/stationnements-deneigement
 
 # 5. **Références à la problématique:**
+
+https://carrefour.vivreenville.org/publication/problematique-du-stationnement
 
 https://www.journaldemontreal.com/2024/01/22/les-defis-du-deneigement-a-montreal
 
 https://ici.radio-canada.ca/nouvelle/1093533/deneigeurs-remorquage-milliers-vehicules-hors-heures-montreal
 
-https://donnees.montreal.ca/dataset/stationnements-deneigement
 
 https://cdn.ca.yapla.com/company/CPYdNZRxWi163lmbLnVjgAqMF/asset/files/Outils/2023-03-02_CRE-Montreal_Livre-blanc-VF_numerique.pdf
 
 https://play.google.com/store/apps/details?id=com.heritagesoftware.infoneige&pli=1
+
 https://services.montreal.ca/deneigement/carte
+
