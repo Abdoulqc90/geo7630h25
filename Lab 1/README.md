@@ -40,7 +40,7 @@ https://donnees.montreal.ca/dataset/c1d65779-d3cb-44e8-af0a-b9f2c5f7766d/resourc
 
 Configurer un `Writer` dans lequel on sélectionne le format `PostGIS` puis on sélectionne la connexion `geo7630h25`.
 
-Dans `paramètres de connexion`, on spécifie la connexion à la base de données **Amazon** en copiant et collant le lien suivant dans *Host* :
+Dans `paramètres de connexion`, on spécifie la connexion à la base de données **Amazon** en copiant et collant le lien suivant dans `Host` :
 ```bash
 geo7630h25.cvwywmuc8u6v.us-east-1.rds.amazonaws.com
 ```
