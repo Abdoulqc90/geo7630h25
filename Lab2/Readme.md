@@ -74,7 +74,7 @@ https://donnees.montreal.ca/dataset/9797a946-9da8-41ec-8815-f6b276dec7e9/resourc
 
 - La carte finale observée est simple et compréhensible.
 
-![alt text](image-4.png)
+![alt text](image-3.png)
 
 
 
