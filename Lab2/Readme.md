@@ -60,7 +60,7 @@ https://donnees.montreal.ca/dataset/9797a946-9da8-41ec-8815-f6b276dec7e9/resourc
 
 # Étape 6: Vérification de la table dans DBeaver.
 
-- Ouvrir DBeaver puis verifier que la table est bien présente et que les attributs sont correctes.
+- Ouvrir **DBeaver** puis verifier que la table est bien présente et que les attributs sont correctes.
 
 ![alt text](image-2.png)
 
