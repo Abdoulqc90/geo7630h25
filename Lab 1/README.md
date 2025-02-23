@@ -1,7 +1,7 @@
 # ETAPE 1 : Création d’un compte GITHUB
 Sur GITHUB.COM, on crée un nouveau compte et un nouveau repository nommé geo7630h25.
 
-`https://github.com/Abdoulqc90/geo7630h25/blob/main/Lab%201/README.md`
+https://github.com/Abdoulqc90/geo7630h25/blob/main/Lab%201/README.md
 
 Ouvrir ensuite **VS Code** puis configuration à l’aide de la commande `ctrl+j`
 
