@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# Geo7630nb
+=======
 # GEO7630_LAB1: PRISE EN MAIN DES OUTILS 🛠️.
 
 # ETAPE 1 : Création d’un compte GITHUB
@@ -92,3 +95,5 @@ on vérifie que les points sont correctement positionnés selon les coordonnées
 
 
 
+
+>>>>>>> ef87fb57dc3fa268913c9087f2fe476a03a3d472
