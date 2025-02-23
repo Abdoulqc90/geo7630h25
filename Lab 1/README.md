@@ -22,7 +22,7 @@ Création d’un dossier **Lab1** dans lequel on crée un fichier `Readme.md`. O
 
 Enregistrer les modifications dans `contrôle de code source` en appuyant sur la touche **+**
 
-Ensuite `committe et push* le tout vers GitHub`.
+Ensuite `committe et push` le tout vers GitHub.
 
 
 # ETAPE 2 : lancer FME
