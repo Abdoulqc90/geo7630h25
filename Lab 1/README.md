@@ -9,10 +9,10 @@ Ouvrir ensuite **VS Code** puis configuration à l’aide de la commande `ctrl+j
 
 Entrer respectivement les noms d’utilisateurs et adresse courriel comme suit :
 ```bash
-`git config --global user.name "Abdoulqc90`
+git config --global user.name "Abdoulqc90
 ```
 ```bash
-`git config --global user.email meite.bamo_abdoul_razak@courrier.uqam.ca`
+git config --global user.email meite.bamo_abdoul_razak@courrier.uqam.ca
 ```
 Puis valider.
 
