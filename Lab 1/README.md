@@ -18,7 +18,7 @@ Puis valider.
 
 Clonage du dépôt crée à l’aide de la commande `clone Git repository`.
 
-Création d’un dossier lab1 dans lequel on crée un fichier Readme.md. On écrit Geo7630 dans ce fichier Readme.md.
+Création d’un dossier **Lab1** dans lequel on crée un fichier `Readme.md`. On écrit **Geo7630** dans ce fichier Readme.md.
 
 Enregistrer les modifications dans `contrôle de code source` en appuyant sur la touche **+**
 
