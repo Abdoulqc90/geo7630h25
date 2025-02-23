@@ -1,7 +1,7 @@
 # GEO7630_LAB1: PRISE EN MAIN DES OUTILS 🛠️.
 
 # ETAPE 1 : Création d’un compte GITHUB
-Sur GITHUB.COM, on crée un nouveau compte et un nouveau repository nommé geo7630h25.
+Sur **GITHUB.COM**, on crée un nouveau compte et un nouveau repository nommé `geo7630h25`.
 
 https://github.com/Abdoulqc90/geo7630h25/blob/main/Lab%201/README.md
 
