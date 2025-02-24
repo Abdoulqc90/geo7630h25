@@ -44,7 +44,7 @@ https://donnees.montreal.ca/dataset/2e9e4d2f-173a-4c3d-a5e3-565d79baa27d/resourc
 
 ---
 
-# Étape 6 : Nettoyage et validation des données**
+# Étape 5 : Nettoyage et validation des données**
 
 - On utilise un **AttributeManager** ou un **AttributeKeeper** pour conserver uniquement les champs essentiels. Dans **AttributeManager**, on va renommer l'attribut `point_count` en `nombre_arbres` dans le **Output Attribute**.
 
@@ -64,7 +64,7 @@ https://donnees.montreal.ca/dataset/2e9e4d2f-173a-4c3d-a5e3-565d79baa27d/resourc
 ![alt text](image-6.png)
 ---
 
-# Étape 7 : Calcul de la médiane de densité.
+# Étape 6 : Calcul de la médiane de densité.
 
 - Avant de calculer la médiane de densité, on va tout dabord créer un attribut **densité_arbres** dans **AttributeCreator**.
 
@@ -78,7 +78,7 @@ https://donnees.montreal.ca/dataset/2e9e4d2f-173a-4c3d-a5e3-565d79baa27d/resourc
 ![alt text](image-9.png)
 ---
 
-# Étape 8 : Calcul de l’index par rapport à la moyenne.
+# Étape 7 : Calcul de l’index par rapport à la moyenne.
 
 - Dans **AttributeManager**, on va définir un nouvel attribut: `parc_arbres_densité_index`.
 
@@ -88,26 +88,26 @@ https://donnees.montreal.ca/dataset/2e9e4d2f-173a-4c3d-a5e3-565d79baa27d/resourc
 ![alt text](image-11.png)
 ---
 
-# Étape 9 : Nettoyage des données.
+# Étape 8 : Nettoyage des données.
 
 - A l'aide du **NullAttributeManager**, on remplacer les attributs vides ou contenant des caractères spéciaux par **NULL** 
 
 ![alt text](image-12.png)
 ---
 
-# Étape 10 : Exportation des résultats.
+# Étape 9 : Exportation des résultats.
 
 - A l'aide d'un **Writer**, on exporte les résultats dans une base de données centralisée (PostGIS).
 ---
 
-# Étape 11 : Visualisation des résultats
+# Étape 10 : Visualisation des résultats
 
 - Ouvrir **QGIS** pour visualiser nos resultats. On applique un style à la carte pour faciliter la compréhension et aussi un fond de carte **ESRI Gray (dark)**.
 
 ![alt text](image-13.png)
 ---
 
-# Étape 12: Analyse de la densité arboricole avec une grille H3
+# Étape 11: Analyse de la densité arboricole avec une grille H3
 
 **1) Création d’une grille hexagonale**
 
