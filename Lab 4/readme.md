@@ -18,34 +18,35 @@
 Choisir le `PNG Reader` pour le fichier PNG (image aérienne) et le `COG (cloud-optimized Geo TIFF)` pour les fichiers TIFF ( ilôts de chaleur et modèle numérique de surface). 
 Creer un **bookmarks** pour chacun.
 
-![alt text](image.png)
+![alt text](bookm3.png) 
 
-![alt text](image-1.png)
+![alt text](<book 1.png>) 
 
-![alt text](bookm3.png)
+![alt text](bookm2.png)
+
 
 ## Partie 1 - Intégration d’image aérienne standard
 
 **Etape 1:** Reprojection du raster en `EPSG:32188`
 
-![alt text](image-2.png)
+![alt text](reproject1.png)
 ---
 
 **Etape 2:** Utiliser le `RasterPropertyExtractor` pour extraire des propriétés et des métadonnées d'un raster.
 
-![alt text](image-3.png)
+![alt text](<raster prop esxtractor1.png>)
 ---
 
 **Étape 3:**  utiliser le `RasterResampler` pour redimensionner ou rééchantillonner une image raster, ajustant ainsi sa résolution, sa taille ou sa géométrie.
 
-![alt text](image-4.png)
+![alt text](<raster resamplervrai1.png>)
 
-![alt text](image-5.png)
+![alt text](<raster resamplervrai1 arithmetic.png>) 
 ---
 
 **Étape 5:** ajouter le `rasterPyramider` pour optimiser l'affichage et l'analyse de grandes images sur différents niveaux de zoom.
 
-![alt text](image-6.png)
+![alt text](rasterpyramid1.png)
 ---
 
 **Étape 6:**  on utilise le `FeatureWriter` avec le nom de table: 
@@ -56,7 +57,7 @@ hm-2002-can-4000-0257.
 
  Contrairement au Writer de base celui ci permet de chaîner les actions à la suite de l’écriture.
 
-![alt text](image-7.png)
+![alt text](featurewriter.png)
 ---
 
 **Étape 7:** dans `SQLExecuter` on exécute la requête suivante:
@@ -65,7 +66,7 @@ hm-2002-can-4000-0257.
 CREATE TABLE VOTRECODEMS.mns_pyramid_lvl_2 AS SELECT * FROM "hm-2002-can-4000-0257_pyramide" WHERE "_pyramid_level" = 2
 ```
 
-![alt text](image-8.png)
+![alt text](<sql executor.png>)
 
 Le **workbench** se présente comme suit:
 
