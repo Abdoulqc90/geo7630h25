@@ -82,49 +82,48 @@ Le **workbench** se présente comme suit:
 
 **Etape 1:** Reprojection des îlots de chaleur en `32188`
 
-![alt text](image-9.png)
+![alt text](reproject2.png)
 
 ---
 
 **Étape 2:** ajouter un `RasterToPolygonCoercer` pour convertir des images raster en entités vectorielles polygonales. On change  le `Label Attribute` pour `classification`.
 
-![alt text](image-10.png)
+![alt text](rastertopolygoncoecer.png)
 
 ---
 
 **Étape 3:** ajouter un `writer  Postgis` avec pour Nom de la table : `ilots_chaleur_polygones`.
 
-![alt text](image-11.png)
+![alt text](ilots-chaleurs-polygones.png)
 
 ---
 
 **Étape 4:** Visualisation dans QGIS et changer la valeur de la symbologie pour `classification`.
 
-![alt text](image-13.png)
-
+![alt text](<QGIS ilot chaleurs polygones.png>)
 ---
 
-![alt text](image-12.png)
+![alt text](<QGIS ilot chaleurs polygones 2.png>)
 
 ---
 
 **Étape 5:** utiliser le `RasterDiffuser` pour améliorer la netteté de l'image raster. Cela permet de rendre l'image plus claire et plus définie.
 
-![alt text](image-14.png)
+![alt text](rasterdiffuser1.png)
 
 ---
 
 **Étape 6:** ajouter à la suite un `RasterCellValueRounder` avec la valeur **1** dans le champ `Decimal places`. Puis un `RasterToPolygonCoercer` avec pour label `classification`.
 
-![alt text](image-15.png)
+![alt text](rastercellvaluerounder1.png)
 ---
 
-![alt text](image-16.png)
+![alt text](rastertopolygoncoecer-1.png)
 ---
 
 **Étape 7:** ajouter un **writer Postgis** avec pour nom de table ` _ilots_chaleur_polygones_sharp` et ensuite visualisation dans QGIS.
 
-![alt text](image-17.png)
+![alt text](<QGIS ilot chaleurs polygones-sharp.png>)
 ---
 
 ![alt text](image-18.png)
