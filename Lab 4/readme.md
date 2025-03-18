@@ -123,66 +123,68 @@ Le **workbench** se présente comme suit:
 
 **Étape 7:** ajouter un **writer Postgis** avec pour nom de table ` _ilots_chaleur_polygones_sharp` et ensuite visualisation dans QGIS.
 
-![alt text](<QGIS ilot chaleurs polygones-sharp.png>)
+![alt text](writer_ilots-chaleurs-polygones_sharp.png)
 ---
 
-![alt text](image-18.png)
----
+![alt text](<QGIS ilot chaleurs polygones-sharp.png>)
+
 
 **Étape 8:** utiliser  `RasterCellCoercer` 
 
-![alt text](image-19.png)
+![alt text](rastercellcoecer1.png)
 ---
 
 **Étape 9:** utiliser ensuite un **writer Postgis** avec le nom de la table `ilots_chaleur_points`. Puis visualisation dans QGIS. Dans symbologie, utiliser **$z** pour extraire la valeur **Z** dans le `constructeur d'expression`.
 
-![alt text](image-20.png)
+![alt text](<writer ilots-chaleurs-points.png>)
 ---
 
-![alt text](image-21.png)
+![alt text](<symbologie ilot points .png>)
 ---
 
-![alt text](image-22.png)
+![alt text](<QGIS ilots-chaleurs-points.png>)
 ---
 
 Le **Workbench** se presente comme suit:
 
-![alt text](image-23.png)
+![alt text](<workbench ilots-chaleurs_vrai.png>)
 ---
 
 # Partie 3: Intégration de raster (MNS)**
 
 **Étape 1:** ajoiuter un `ContourGenerator` pour créer des lignes de contour à partir d'une surface raster.
 
-![alt text](image-24.png)
+![alt text](<contour generator.png>)
 ---
 
 **Étape 2:** ajout d'un `Generalizer` pour simplifier ou lisser la géométrie des entités en réduisant le nombre de sommets. 
 
-![alt text](image-25.png)
+![alt text](generalizer.png)
 ---
 
 **Étape 3:** utiliser `AreaBuilder` pour créer des polygones (zones) à partir de lignes ou de points.
 
-![alt text](image-26.png)
+![alt text](areabuilder.png)
 ---
 
 **Étape 4:** ajout d'un **writer (Postgis)** avec pour nom de table  `mns_contour_polygones`
 
-![alt text](image-27.png)
+![alt text](<writer mns.png>)
 ---
+
+A chaque étape, on ajoute un `logger`pour s'assurer du bon déroulement des opérations.
 
 le **Workbench** se présente comme suit:
 
-![alt text](image-28.png)
+![alt text](<workbench MNS.png>)
 ---
 
 **Étape 5:** effectuer la Visualisation dans QGIS
 
-![alt text](image-29.png)
+![alt text](QGIS_MNS_Symbologie.png)
 ---
 
-![alt text](image-30.png)
+![alt text](<QGIS mns contour.png>)
 ---
 ---
 
