@@ -1,4 +1,4 @@
-#**Laboratoire 5: Intégration et visualisation de données 3D Lidar et tuiles 3D Vectorielles**
+## Laboratoire 5: Intégration et visualisation de données 3D Lidar et tuiles 3D Vectorielles**
 
 ## Étape 1 Importation et nettoyage des nuages de points.
 
