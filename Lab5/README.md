@@ -132,11 +132,72 @@ Puis pour terminer nous allons transformer le nuage de points en couche de vecte
 ![alt text](Etape5.png)
 ---
 
-## Étape 7: Ajout des empruntes et details de bâtiments
+## Étape 6: Ajout des empruntes et details de bâtiments
 
 **Objectif**:  assigner le Z et la couleur aux polygones de bâtiments
 
 **1** Ajouter 2 sources shapefiles pour les empreintes de toits  (polygones) et les détails des toits (lignes) puis Reprojeter 2950 en 3857 avec un `EsriReprojector`.
+
+----
+![alt text](<etape 6 reprojector.png>)
+----
+**2** On Calcule le bounding box du nuage de points avec un `BoundingBoxAccumulator`puis on découpe avec un `Clipper` les polygones et les lignes. On découpe également les empreintes de toits avec les détails à l'aide d'un `PolygonCutter` issue du FMEHub.
+---
+
+![alt text](Etape6.png)
+
+---
+
+## Étape 7: Jointure des propriétés du nuage de points dans les polygones
+
+**1** On joint les polygones détaillés avec les points du nuages de points pour y injecter les valeurs de Z et de couleur du batiments avec un `PointOnAreaOverlayer`. On va accumuler les informations de Z et de couleurs pour ensuite calculer les moyennes qui nous permettront d’attribuer à chaque “bâtiments” une hauteur moyenne et une couleur.
+
+---
+![alt text](pointonareaoverlayer.png)
+---
+
+**2** On ajoute un `ListSummer` puis on va créer un attribut pour calculer la moyenne avec`AttributeCreator`.
+**Valeur d'attribut**:
+```bash
+ @Evaluate(@round(@Value(_sum)/@Value(_overlaps),4))
+ ```
+ ---
+ ![alt text](Listsummer.png)
+---
+
+![alt text](attributecreator.png)
+---
+
+**3** `AttributeManager` pour garder seulement les 2 propriétés qui nous intéressent et ensuite on transforme le `FME color` en RGB ou WebRGB  avec un `ColorConverter` (FME Hub). On exporte par la suite notre résultat avec `GeoJSONWriter` dans le répertoire : 
+```bash
+"C:\Users\bamom\Desktop\BAMO DOCS\canada doc\Cours UQAM\Integration et visualisation des données\labo5\labo5.json"
+```
+---
+![alt text](attributemanager.png)
+---
+
+![alt text](colorconverter.png)
+---
+
+![alt text](Geojsonwriter.png)
+---
+![alt text](Etape7.png)
+---
+
+## Étape 9 Visualisation du résultat dans MaplibreGL
+
+On ouvre le fichier `MaplibreGL.html` en double cliquant dessus puis dans `choisir un fichier`, on sélectionne notre fichier: 
+```bash
+"C:\Users\bamom\Desktop\BAMO DOCS\canada doc\Cours UQAM\Integration et visualisation des données\labo5\labo5.json"
+```
+cela va nous permettre de naviguer et visualiser notre carte avec les bâtiments.
+
+----
+![alt text](<carte final.png>)
+
+
+
+
 
 
 
