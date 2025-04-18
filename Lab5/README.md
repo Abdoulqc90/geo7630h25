@@ -58,8 +58,96 @@ https://data.montreal.ca/dataset/b628f1da-9dc3-4bb1-9875-1470f891afb1/resource/9
 ![alt text](<reprojector etape2.png>)
 ----
 
-**2** On utilises un `Clipper` pour découper le nuage de points puis avec la limites terrestres pour enlever les points superflus qui dépasse de notre zone de travail
+**2** On utilises un `Clipper` pour découper le nuage de points puis avec les limites terrestres pour enlever les points superflus qui dépasse de notre zone de travail
 
 ----
 ![alt text](<clipper parameters etape2.png>)
 ----
+**3** On connecte ensuite le nuage de points combiné dans l'étape 1 aux limites terrestres clippées.
+----
+![alt text](etape2.png)
+----
+
+## Étape 3: Simplification du nuage de points avec un  thinner interval de 5 
+
+----
+![alt text](<thinner intervale de 5.png>)
+---
+## Étape 4: Ajout de rasters géoréférencés
+
+**Objectif**: ajouter la couleur du raster à notre nuage de points
+
+**1** On telecharge et on ajoute les 4 rasters d'un seul coup en faisant un `drag and drop` dans un `PNG Reader`.
+---
+![alt text](<etape4 pngreader and drag drop.png>)
+---
+
+**2** Ajouter un `reprojector` 3857 vers 32188 puis un `rasterMosaicker` dans le but de fusionner les rasters en seul. Pour choisir les 3 bandes RGB et supprimer la bande alpha, on ajoute un `RasterSelector`.
+
+
+----
+![alt text](<reprojector etape4.png>)
+---
+
+![alt text](<ratsermosaicker etape 4.png>)
+
+----
+![alt text](<rasterselector etape4.png>)
+---
+
+On peut décider d'ajouter `rasterPropertyExtractor` et ensuite coller un `listExploder` sur la propriété BAND dans le but de connaître sur quelle bande se situe quelle couleur.
+
+---
+![alt text](etape4partie1.png)
+---
+
+**3** On ajoute  `EsriReprojector` (2950 à 3857) 
+
+## Étape 5:  Jointure raster et nuage de points
+
+**1** Ajouter la couleur dans votre nuage de point en ajoutant les valeur du raster avec un `PointCloudOnRasterComponentSetter` puis combiner le résultat en 1 seul nuage avec un `PointCloudCombiner`. 
+
+---
+![alt text](pointcloudonrastercomponant.png)
+---
+
+---
+![alt text](pointcloudcombinersetape4.png)
+---
+
+**2** Filtrer les valeurs du nuage de points dont le raster n’a pas donné de valeur avec un `pointCloudFilter`. Pour ce faire, on va choisir les valeurs RGB qui sont toutes à 0 avec l’expression suivante :
+```bash
+@Component(color_red)!=0&&@Component(color_blue)!=0&&@Component(color_green) 
+```
+
+Puis pour terminer nous allons transformer le nuage de points en couche de vecteurs ponctuels simple avec un `PointCloudtopointCoercer`, en s’assurant de garder les composantes nécessaires pour la suite.
+---
+
+![alt text](pointcloudfilter1.png)
+---
+
+![alt text](<pointcloudtopointcoercer parameters.png>)
+---
+
+![alt text](Etape5.png)
+---
+
+## Étape 7: Ajout des empruntes et details de bâtiments
+
+**Objectif**:  assigner le Z et la couleur aux polygones de bâtiments
+
+**1** Ajouter 2 sources shapefiles pour les empreintes de toits  (polygones) et les détails des toits (lignes) puis Reprojeter 2950 en 3857 avec un `EsriReprojector`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
