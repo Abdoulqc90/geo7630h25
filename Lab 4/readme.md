@@ -70,6 +70,8 @@ CREATE TABLE VOTRECODEMS.mns_pyramid_lvl_2 AS SELECT * FROM "hm-2002-can-4000-02
 
 Le **workbench** se présente comme suit:
 
+![alt text](<Workflow image aérienne.png>)
+
 
 
 
