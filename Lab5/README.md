@@ -137,13 +137,11 @@ Puis pour terminer nous allons transformer le nuage de points en couche de vecte
 **Objectif**:  assigner le Z et la couleur aux polygones de bâtiments
 
 **1** Ajouter 2 sources shapefiles pour les empreintes de toits  (polygones) et les détails des toits (lignes) puis Reprojeter 2950 en 3857 avec un `EsriReprojector`.
-
 ----
 ![alt text](<etape 6 reprojector.png>)
 ----
 **2** On Calcule le bounding box du nuage de points avec un `BoundingBoxAccumulator`puis on découpe avec un `Clipper` les polygones et les lignes. On découpe également les empreintes de toits avec les détails à l'aide d'un `PolygonCutter` issue du FMEHub.
 ---
-
 ![alt text](Etape6.png)
 
 ---
@@ -184,7 +182,7 @@ Puis pour terminer nous allons transformer le nuage de points en couche de vecte
 ![alt text](Etape7.png)
 ---
 
-## Étape 9 Visualisation du résultat dans MaplibreGL
+## Étape 8 Visualisation du résultat dans MaplibreGL
 
 On ouvre le fichier `MaplibreGL.html` en double cliquant dessus puis dans `choisir un fichier`, on sélectionne notre fichier: 
 ```bash
