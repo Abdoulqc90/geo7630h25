@@ -75,3 +75,85 @@ On va dans la page `contenu` cliquer sur notre Nouveau `FeatureLayer` puis sur `
 
 ## Étape 3 : Création d’une carte interactive (MapViewer)
 
+**1** On ouvre le Feature Layer dans MapViewer et on applique un `style d’agrégation` pour représenter les départs et arrivées. Ensuite on va configurer les étiquettes pour afficher les `totaux par station`.
+---
+![alt text](<style d'agregation.png>)
+---
+**2** On clique maintenant sur `Styles` puis sur `+ Champ` afin d’ajouter `start_total_count` et `end_total_count`. On Choisit `Comparer A à B`.
+---
+![alt text](<style comparaison A et B.png>)
+---
+**3** Cliquer sur `Options de style` puis on choisit dans l’onglet `Étiquettes` l'option `Afficher A comme pourcentage de A et B`. Après on enregistre en tant que `CARTE 1`.
+---
+![alt text](<Option style.png>)
+---
+![alt text](<enregistrer carte1.png>)
+---
+**4** On  clique sur le menu d’applications et on choisit `Dashboards`
+---
+![alt text](dashboards.png) 
+---
+
+## ESRI Dashboard
+
+**1** On crée un nouveau tableau de bord et on choisit le bon dossier puis on ajoute un élément `CARTE `. On choisit la carte précédemment crée avec les clusters puis dans `réglages`, on selectionne les options selon nos choix avant de cliquer sur `terminé`.
+Pour notre cas, on a volontairement laissé les paramètres par défaut avant de cliquer sur `terminé`.
+
+---
+![alt text](<créer un nouveau tableau de bord.png>)
+---
+![alt text](<ajout d'un élément carte.png>)
+---
+![alt text](<reglages aucun.png>)
+---
+![alt text](<carte dash.png>)
+---
+
+**2** Dans `Mise en page` (Version), on ajoute un `en-tête`( `abdoulTest` par exemple)
+---
+![alt text](<ajout d'en tête.png>)
+---
+
+![alt text](<titre abdoulTest.png>)
+---
+
+**3** Dans `CORPS`, on va ajouter un élément en de type `JAUGE`, avec la somme statistique sur le `start_total_count`.
+---
+![alt text](jauge.png)
+--
+
+**4** Dans généralité, on change le Titre (`Total des départs`) puis on  enregistre. Ensuite on glisse la jauge en bas de la carte. On repète le même processus pour la somme statistique `end_total_count`.
+---
+![alt text](<jauge depart et arrivées.png>)
+---
+
+**5** Ajout d'un indicateur
+
+Dans `INDICATEUR`, on clique sur `ACTIVER (mise en forme avancée)`
+---
+![alt text](indicateur.png)
+--- 
+
+Puis on ajoute les lignes suivantes à `TOPTEXT`:
+```bash
+topText: 'Ratio départ / arrivée',
+```
+```bash
+topTextMaxSize: 'medium',
+```
+```bash
+middleText: Round($datapoint.sum_start_total_count/$reference.sum_end_total_count,3),
+```
+
+---
+
+
+
+
+
+
+
+
+
+
+
