@@ -86,7 +86,62 @@ Puis on l'ajoute dans le fichier lab9.html :
 ![alt text](<map with random color.png>)
 ---
 
-**4** Ajout d'une coloration thématique à l'aide de `operator_id` pour colorier des polygones en fonction de l’attribut `operator_id`. Ce type de paramètre sera  utilisé ici dans la propriété 
+**4** Ajout d'une coloration thématique à l'aide de `operator_id` pour colorier des polygones en fonction de l’attribut `operator_id`. Ce type de paramètre sera  utilisé ici dans la propriété fill-color d’un layer de type `fill` :
+```bash
+map.addLayer({
+  'id': 'garages-layer',
+  'type': 'fill',
+  'source': 'geojson-source',
+  'paint': {
+    'fill-color': [
+      'match',
+      ['get', 'operator_id'], 
+      2, randomColor(),
+      3, randomColor(),
+      15, randomColor(),
+      20, randomColor(),
+      25, randomColor(),
+      30, randomColor(),
+      '#000000' // Couleur par défaut si aucune correspondance
+    ],
+    'fill-opacity': 0.8
+  }
+});
+```
+---
+![alt text](<coloration thematique.png>)
+---
+
+![alt text](<carte coloration thematique.png>)
+---
+
+# Étape 5: Ajout des étiquettes aux polygones
+
+Dans la fonction `handleFileSelect` (ligne 32) on va injecter le morceau de code suivant à la fin (après la méthode map.addLayer()) pour permettre l'ajout d'un nouveau layer d'étiquettes à nos polygones de garages. Ensuite on recharge la page pour afficher le résultat :
+```bash
+map.addLayer({
+  'id': 'geojson-label',
+  'type': 'symbol',
+  'source': 'geojson-source',
+  'layout': {
+    'text-field': ['get', 'operator_id'],
+  },
+  'paint': {
+    'text-color': '#202',
+    'text-halo-color': '#fff',
+    'text-halo-width': 2
+  }
+})
+```
+
+---
+![alt text](<ajout des étiquettes.png>)
+---
+
+![alt text](carte+étiquettes.png)
+---
+
+On verifie les modifications et on fait les mises à jour sur Github à travers un `commit and push`.
 
 
 
