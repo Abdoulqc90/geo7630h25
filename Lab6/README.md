@@ -186,6 +186,85 @@ On va ensuite ajouter une carte
 ---
 
 **3** Insérer la légende en drag and drop puis   des des Geosignets
+---
+![alt text](<légende et géosignets.png>)
+---
+
+---
+![alt text](géosignets.png)
+---
+
+**4**  ajout d'une TABLE et 2 éléments de texte puis Ajouter au texte une connexion aux données 
+
+
+rendu après ajout de table et deux éléments de texte: 
+---
+![alt text](<ajout de table, connection texte- base de données.png>)
+---
+
+**5** Injecter des données statistiques dynamique au texte:
+
+Cliquer sur le texte et sur l’icône Base de données au dessus de la boîte de texte puis Ajouter la somme par départ et arrivée dans les boites respectives.
+
+---
+![alt text](<connection texte-base de données.png>)
+---
+
+---
+![alt text](dashboard1.png)
+---
+
+**6** Enregistrer et publier
+
+---
+![alt text](<dashboard EB.png>)
+---
+
+## Étape 6: Mise à jour des données avec FME
+
+
+**1** Dans le même FME, ajout d'un `CSV READER`:
+```bash
+https://sitewebbixi.s3.amazonaws.com/uploads/docs/20220108-donnees-ouvertes-816bd4.zip
+```
+
+Ensuite, On remplace la source de juillet par la source d'août en faisant un Clic-droit sur le Reader de juillet pour choisir l’option “Disable”.
+---
+![alt text](<disable juillet .png>)
+---
+
+---
+![alt text](<reader aout connecté.png>)
+---
+
+**2** AGOL readere
+
+Créer un nouveau Reader pour lire les données de ArcGIS Online du mois de Juillet pour faire la comparaison avec les nouvelles données du mois d'août.
+---
+![alt text](<esri reader .png>)
+---
+
+**3** N’exposez que les 4 attributs ci-bas.
+
+---
+![alt text](attributs_à_exposer.png)
+---
+
+**4** ChangeDetector
+
+Ici le transformer nous permet d’intercepter tous les nouveaux changements entre les 2 mois de données et pose la question : Est-ce que les stations bixi ont changé de place ? Est-ce qu’il y a des nouvelles stations ? etc… On choisit la clé primaire (identifiant unique) (pk) de station pour identifier les changements 
+
+---
+![alt text](<change detector.png>)
+---
+
+
+
+
+
+
+
+
  
 
 
