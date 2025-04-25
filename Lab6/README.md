@@ -1,6 +1,6 @@
 ## Laboratoire 6 et 7 : ArcGIS Online, Dashboard et Experience Builder – Intégration de données
 
-**Étape 1: Importation des données dans ArcGIS Online**
+## Étape 1: Importation des données dans ArcGIS Online**
 
 **1** Chargement des données CSV:
 ```bash
@@ -94,7 +94,7 @@ On va dans la page `contenu` cliquer sur notre Nouveau `FeatureLayer` puis sur `
 ![alt text](dashboards.png) 
 ---
 
-## ESRI Dashboard
+## ÉTAPE 4:  ESRI Dashboard
 
 **1** On crée un nouveau tableau de bord et on choisit le bon dossier puis on ajoute un élément `CARTE `. On choisit la carte précédemment crée avec les clusters puis dans `réglages`, on selectionne les options selon nos choix avant de cliquer sur `terminé`.
 Pour notre cas, on a volontairement laissé les paramètres par défaut avant de cliquer sur `terminé`.
@@ -142,10 +142,65 @@ topText: 'Ratio départ / arrivée',
 topTextMaxSize: 'medium',
 ```
 ```bash
-middleText: Round($datapoint.sum_start_total_count/$reference.sum_end_total_count,3),
+  middleText: Round($datapoint.SUM_START_TOTAL_COUNT/$reference.SUM_END_TOTAL_COUNT,3),
 ```
 
+![alt text](indicateur2.png)
+
 ---
+
+**6** Ajout d'un nouvel indicateur sur le total de station à l’écran (nombre de station) et d'une légende.
+---
+![alt text](<indicateur +légende.png>)
+---
+
+**7**  on va activer le calcul dynamique sur chacun des widgets
+
+On Clique sur Configurer la carte puis on va  dans `ACTIONS SUR LA CART`E et` activer toutes valeurs de filtre`.
+---
+![alt text](<calcul dynamique widgets.png>)
+---
+
+Notre carte devrait ressembler à ca: 
+---
+![alt text](<carte avec toutes valeurs filtres.png>)
+---
+
+## Étape 5: ESRI Experience Builder
+
+**1** Ouvrir `Expérience Builder` et Créer un nouveau Experience Builder. On Choisit un template “Grille vierge”
+On va ensuite ajouter une carte 
+
+---
+![alt text](<ajout de carte experience builder.png>)
+---
+
+**2** Cliquer sur `selectionner des données` à droite puis on choisit la bonne carte et on clique sur terminé.
+
+---
+![alt text](<ajout de carte experience builder-1.png>)
+---
+
+---
+![alt text](<carte EB1.png>)
+---
+
+**3** Insérer la légende en drag and drop puis   des des Geosignets
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
