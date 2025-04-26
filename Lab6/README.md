@@ -247,16 +247,46 @@ Créer un nouveau Reader pour lire les données de ArcGIS Online du mois de Juil
 **3** N’exposez que les 4 attributs ci-bas.
 
 ---
-![alt text](attributs_à_exposer.png)
+![alt text](<attributs à exposer dans reader AGOL.png>)
 ---
 
 **4** ChangeDetector
 
-Ici le transformer nous permet d’intercepter tous les nouveaux changements entre les 2 mois de données et pose la question : Est-ce que les stations bixi ont changé de place ? Est-ce qu’il y a des nouvelles stations ? etc… On choisit la clé primaire (identifiant unique) (pk) de station pour identifier les changements 
+nous permet d’intercepter tous les nouveaux changements entre les 2 mois de données. On choisit la clé primaire (identifiant unique) (pk) de station pour identifier les changements 
 
+---
+![alt text](<change detector settings.png>)
+---
+
+Entre juillet et août il y a 13 stations disparues et 51 nouvelles qui seront insérées et 722 stations qui seront mises à jour.
 ---
 ![alt text](<change detector.png>)
 ---
+
+**5** On fait le menage avec `AttributeManager` puis on ajoute un `AGOL Writer`.
+---
+![alt text](attributemanager3.png)
+---
+
+---
+![alt text](<esri AGOL writer.png>)
+---
+---
+![alt text](<esri AGOL writer2.png>)
+---
+
+Le workbench final devrait ressembler à ce qui suit:
+
+---
+![alt text](<workbench final.png>)
+---
+
+On peut maintenant faire une mise à jour de notre `Dashboard` ou `Expérience builder` et voir que les données ont été mises à jour sans rien briser (dû au fait qu’il y a 13 stations supprimés et 51 nouvelles stations ).
+---
+![alt text](<EB final.png>)
+---
+
+
 
 
 
