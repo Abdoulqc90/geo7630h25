@@ -30,14 +30,16 @@ git checkout -b votre_nom-labo9
 ---
 ## Étape 3: Modification du code
 
-**1**. Dans le fichier `lab9.js`, on va localiser et modifier les coordonnées et le niveau de zoom par défaut puis on sauvegarde. Ensuite, on recharge la page web pour voir apparaître nos modifications (F5).
+**1**. Dans le fichier `lab9.js`
+ on va localiser et modifier les coordonnées et le niveau de zoom par défaut puis on sauvegarde. Ensuite, on recharge la page web pour voir apparaître nos modifications (F5).
 ---
 ![alt text](<coordonnées et zoom.png>)
 ---
 ![alt text](<carte modif1.png>)
 ---
 
-**2**. Ajout du GeoJSON: sur la carte avec le bouton `choisir un fichier`, on va ajouter le fichier geojson `garage`. Ensuite on peut voir apparaître les polygones sur la carte mais avec une symbologie par défaut.
+**2**. Ajout du GeoJSON:
+ sur la carte avec le bouton `choisir un fichier`, on va ajouter le fichier geojson `garage`. Ensuite on peut voir apparaître les polygones sur la carte mais avec une symbologie par défaut.
 ---
 ![alt text](<ajout de fichier geojson.png>)
 
