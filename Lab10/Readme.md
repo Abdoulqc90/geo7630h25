@@ -195,10 +195,77 @@ On va appliquer un style basé sur une interpolation linéaire de la propriété
 
 On utilise FME pour charger les limites d'arrondissements dans notre schéma de bases de données (nommer la table aussi simplement que arrondissements)
 Ensuite, on va rendre le port `9000 (pg_featureserv)` `public` pour trouver et copier l'URL du service WFS des arrondissements.
+Attention, faut bien inclure la méthode qui fait la requete sans limite d'items de données `/items?limit=5000'`, à la fin de l'URL WFS.
+
 
 ---
 ![alt text](<WFS arrondissements.png>)
 ---
+
+---
+![alt text](<URL WFS.png>)
+---
+
+Ajouter ensuite une fonction `loadWFS()` dans app.js, mais avant il est important d'ajouter `function getRandomColor() ` :
+```bash
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+function loadWFS() {
+    // Ajout de la source de données des arrondissements depuis pgFeatureServ
+    map.addSource('arrondissements-source', {
+        type: 'geojson',
+        data: 'https://super-duper-carnival-5grrgx7r76gwc7vrj-9000.app.github.dev/collections/MEIB19269006.arrondissements/items?limit=5000'
+    });
+
+    // Ajout de la couche des arrondissements sous la couche 'qt_arbres_quartier'
+    map.addLayer({
+        'id': 'arrondissements',
+        'type': 'fill',
+        'source': 'arrondissements-source',
+        'paint': {
+            'fill-outline-color': 'black',
+            'fill-color': getRandomColor(), // Couleur aléatoire
+            'fill-opacity': 0.3
+        }
+    }, 'qt_arbres_quartier'); // 👈 Placement sous la couche 'qt_arbres_quartier'
+}
+```
+Important: Pour permettre au layer WFS de se loger hierarchiquement en dessous du layer des quartiers, on a ajouté cette propriété à la fin , comme mentionné plus haut:
+```bash
+'qt_arbres_quartier'); // 👈 Placement sous la couche 'qt_arbres_quartier'
+```
+
+---
+![alt text](<ajout fonctions getrandomcolor et loadwfs.png>)
+---
+
+## Étape 8: Ajout d'un bouton HTML pour déclencher la fonction :
+
+Dans `index.Html`, on va ajouter le code suivant: 
+```bash
+<div class='map-overlay top' >
+    <button type="button" class="btn btn-primary" onclick="loadWFS()">Load WFS Data</button>
+</div>
+```
+
+---
+![alt text](<ajout de boutons.png>)
+---
+On recharge la page puis on clique sur le bouton `load WFS data` pour afficher la couche WFS.
+
+---
+![alt text](<couche WFS.png>)
+---
+
+
+
 
 
 
