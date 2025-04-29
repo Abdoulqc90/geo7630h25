@@ -1,4 +1,6 @@
-A défaut de pouvoir utiliser `codespace`, on va travailler sur `jsfiddle`
+# Laboratoire 12
+
+## A défaut de pouvoir utiliser `codespace`, on va travailler sur `jsfiddle`
 
 # Créer et styliser des clusters
 
