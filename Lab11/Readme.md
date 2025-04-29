@@ -119,8 +119,11 @@ Ensuite, on ajoute à la suite au `paint` un `filtrage` pour ne garder que ceux 
 ## Étape 4: Ajout des interactions souris
 
 on va injecter les controleurs de souris :
+
 Survol (mouseenter / mouseleave) : changement du curseur
+
 Afficher une `popup` (nom + type)
+
 Effectuer un zoom et un recentrage (flyTo)
 
 ---
@@ -268,6 +271,8 @@ function initMouseControls(map) {
   });
 }
 ```
+
+---
 
 
 ## Html
